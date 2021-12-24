@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/Project_Akhir/beranda">Beranda</a>
+                        <a class="nav-link" aria-current="page" href="/web/beranda">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/Project_Akhir/resep">Resep</a>
+                        <a class="nav-link active" href="/web/resep">Resep</a>
                     </li>
                 </ul>
-                <form class="d-flex search" action="/Project_Akhir/cari-resep">
+                <form class="d-flex search" action="/web/cari-resep">
                     <input name='key' class="form-control me-2" type="search" placeholder="Cari resep"
                         aria-label="Search">
                     <button class="btn btn-success" type="submit">Cari</button>
@@ -58,8 +58,7 @@
                 hidangan seru bergaya rumahan,
                 tepat sebagai masakan sehari-hari.</p>
             <?php foreach($allRecipe['results'] as $data) {?>
-            <a href="/Project_Akhir/resep/detail?key=<?php echo $data['key']?>"
-                class="recipes col-12 col-lg-6 col-sm-6">
+            <a href="/web/resep/detail?key=<?php echo $data['key']?>" class="recipes col-12 col-lg-6 col-sm-6">
                 <img class="img-newRecipe" src=" <?php echo $data['thumb'] ?>">
                 <div class="detail">
                     <i class="bi bi-alarm-fill"></i>
@@ -75,17 +74,14 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
-                        <a href="/Project_Akhir/resep" class="page-link">
+                        <a href="/web/resep" class="page-link">
                             < Sebelumnya</a>
                     </li>
-                    <!-- <li class="page-item"><a class="page-link" href="/Project_Akhir/resep/?page=2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="/Project_Akhir/resep/?page=3">3</a></li>
-                    <li class="page-item"><a class="page-link" href="/Project_Akhir/resep/?page=4">4</a></li> -->
-                    <li class="page-item disabled"><a class="page-link" href="/Project_Akhir/resep">...</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="/web/resep">...</a></li>
                     <!-- <li class="page-item">
                         <a class="page-link" href="#">Next</a>
                     </li> -->
-                    <li class="page-item"><a class="page-link" href="/Project_Akhir/resep">Berikutnya ></a></li>
+                    <li class="page-item"><a class="page-link" href="/web/resep">Berikutnya ></a></li>
                 </ul>
             </nav>
         </div>
@@ -94,7 +90,7 @@
             <?php foreach($newRecipe['results'] as $data) {?>
             <div class="new-recipes-ads d-flex justify-content-start align-items-center">
                 <img src="<?php echo $data['thumb'] ?>" style="object-fit: cover;">
-                <a href="/Project_Akhir/resep/detail?key=<?php echo $data['key']?>"><?php echo $data['title'] ?></a>
+                <a href="/web/resep/detail?key=<?php echo $data['key']?>"><?php echo $data['title'] ?></a>
             </div>
             <?php }?>
         </div>
@@ -108,10 +104,10 @@
         </div>
         <a href="https://github.com/tomorisakura/unofficial-masakapahariini-api"><i class="bi bi-github"></i></a>
         <div class="d-flex justify-content-center mb-3">
-            <a href="/Project_Akhir/beranda">
+            <a href="/web/beranda">
                 <li style="margin-right: 30px; font-size: 14px">Beranda</li>
             </a>
-            <a href="/Project_Akhir/resep">
+            <a href="/web/resep">
                 <li style="margin-right: 30px; font-size: 14px">Resep</li>
             </a>
         </div>

@@ -72,7 +72,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <title>Document</title>
+    <title>Beranda</title>
 </head>
 
 <body>
@@ -89,13 +89,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/Project_Akhir/beranda">Beranda</a>
+                        <a class="nav-link active" aria-current="page" href="/web/beranda">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Project_Akhir/resep">Resep</a>
+                        <a class="nav-link" href="/web/resep">Resep</a>
                     </li>
                 </ul>
-                <form class="d-flex search" action="/Project_Akhir/cari-resep">
+                <form class="d-flex search" action="/web/cari-resep">
                     <input name='key' class="form-control me-2" type="search" placeholder="Cari resep"
                         aria-label="Search">
                     <button class="btn btn-success" type="submit">Cari</button>
@@ -106,7 +106,7 @@
     <p style="padding-top: 80px;" class="text-center title-category">Telusuri berdasarkan</p>
     <div class="chategory row justify-content-center">
         <?php foreach($chategory as $data) {?>
-        <a href="/Project_Akhir/resep/kategori?key=<?php echo $data['key']?>&thumb=<?php echo $data['dekstop-thumb']?>&category=<?php echo $data['category']?>"
+        <a href="/web/resep/kategori?key=<?php echo $data['key']?>&thumb=<?php echo $data['dekstop-thumb']?>&category=<?php echo $data['category']?>"
             class="box col-12 col-lg-4 col-sm-6">
             <img class="img-chategory" src=" <?php echo $data['thumb'] ?>">
             <div class="text-category"><?php echo $data['category'] ?></div>
@@ -116,7 +116,7 @@
     <p class="text-center title-newRecipe">Resep terbaru</p>
     <div class="newRecipe row justify-content-center">
         <?php foreach($newRecipe['results'] as $data) {?>
-        <a href="/Project_Akhir/resep/detail?key=<?php echo $data['key']?>" class="recipes col-12 col-lg-4 col-sm-6">
+        <a href="/web/resep/detail?key=<?php echo $data['key']?>" class="recipes col-12 col-lg-4 col-sm-6">
             <img class="img-newRecipe" src=" <?php echo $data['thumb'] ?>">
             <div class="detail">
                 <i class="bi bi-alarm-fill"></i>
@@ -139,10 +139,10 @@
         </div>
         <a href="https://github.com/tomorisakura/unofficial-masakapahariini-api"><i class="bi bi-github"></i></a>
         <div class="d-flex justify-content-center mb-3">
-            <a href="/Project_Akhir/beranda">
+            <a href="/web/beranda">
                 <li style="margin-right: 30px; font-size: 14px">Beranda</li>
             </a>
-            <a href="/Project_Akhir/resep">
+            <a href="/web/resep">
                 <li style="margin-right: 30px; font-size: 14px">Resep</li>
             </a>
         </div>
